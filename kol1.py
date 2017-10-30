@@ -17,28 +17,9 @@
 
 #!/usr/bin/env python2.7
 
-from random import randint
+from Flight import Flight
 
-
-s = "Start:"
-
-print s
-
-flag = 'n'
-flag1 = 'y'
-
-
-angle = 0
-
-while (not flag == 'y' and flag1 =='y'):
-	print 'The angle is: '
-	angle = randint(-90,90)
-	print angle
-	flag1 = raw_input('Should we correct it? (y/n)')
-	if (flag1 == 'n'):
-		print 'We crashed!'
-		break
-	print 'We corrected wings with:'
-	print -angle 
-	flag = raw_input('Should we stop? (y/n)')	
+if __name__ == "__main__":
+	flight = Flight()
+	flight.go()	
 
